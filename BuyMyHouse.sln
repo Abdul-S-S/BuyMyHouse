@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyMyHouse", "BuyMyHouse\BuyMyHouse.csproj", "{19E338D1-D0EB-4914-90DF-AFD6C945C53E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC} = {9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datastore", "Datastore\Datastore.csproj", "{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19E338D1-D0EB-4914-90DF-AFD6C945C53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E338D1-D0EB-4914-90DF-AFD6C945C53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E338D1-D0EB-4914-90DF-AFD6C945C53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E338D1-D0EB-4914-90DF-AFD6C945C53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE003EB-BB87-49D0-B0B3-B0A0C0B9D9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DCA8E89-A5C4-4BAB-B8D4-B3FB160CF0E7}
+	EndGlobalSection
+EndGlobal
