@@ -10,17 +10,17 @@ using Newtonsoft.Json;
 
 namespace BuyMyHouse.API
 {
-    public static class ListHouses
+    public class Users
     {
-        [FunctionName("House")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "house")] HttpRequest req,
+        [FunctionName("User")]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "user")] HttpRequest req,
             ILogger log)
         {
             //if request contains range get houses in range.
             if (req.Method == "GET")
             {
-                return new OkObjectResult("Houses here");
+                return new OkObjectResult("Users here");
             }
             else
             {
