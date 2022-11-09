@@ -6,15 +6,15 @@ namespace Datastore.Models
     {
         public string ID { get; set; }
         public double Price { get; set; }
-        public double Name { get; set; }
+        public string Name { get; set; }
         public DateTime Created { get; set; }
 
-        public House( double price, double name, DateTime created)
+        public House(string name, double price)
         {
             ID = Guid.NewGuid().ToString();
             Price = price;
             Name = name;
-            Created = created;
+            Created = System.DateTime.Now;
         }
 
         public House()

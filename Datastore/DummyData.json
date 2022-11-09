@@ -1,15 +1,38 @@
 {
     "Users": [
         {
-
+            "Firstname": "Erwin",
+            "Lastname": "de Vries",
+            "Email": "erwin.devries@inholland.nl"
+        },
+        {
+            "Firstname": "Frank",
+            "Lastname": "Dersjant",
+            "Email": "frank.dersjant@inholland.nl"
+        },
+        {
+            "Firstname": "Abdul Rahman",
+            "Lastname": "Sheikh Salem",
+            "Email": "611315@inholland.nl"
+        },
+        {
+            "Firstname": "Mark",
+            "Lastname": "de Haan",
+            "Email": "mark.dehaan@inholland.nl"
         }
     ],
     "Houses": [
-        "**/bin",
-        "**/bower_components",
-        "**/jspm_packages",
-        "**/node_modules",
-        "**/obj",
-        "**/platforms"
+        {
+            "Name": "Rijswijk, Steenlaan 134",
+            "Price": 180000
+        },
+        {
+            "Name": "Inholland, Haarlem",
+            "Price": 9999999
+        },
+        {
+            "Name": "Den Haag, Julianaplein 10",
+            "Price": 220000
+        }
     ]
 }
