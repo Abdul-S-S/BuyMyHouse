@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datastore.Interfaces;
 
-namespace Datastore.Services
+namespace Datastore.Operators.Interfaces
 {
-    internal class Reader : IReader
+    public interface IWriter
     {
+        void Write<T>(T obj) where T : class;
     }
 }

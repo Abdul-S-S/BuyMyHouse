@@ -7,11 +7,18 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using BuyMyHouse.Interfaces;
 
 namespace BuyMyHouse.API
 {
-    public class Users
+    public class User
     {
+        private readonly IUserService _userService;
+
+        public User(IUserService userService)
+        {
+            _userService = userService;
+        }
         [FunctionName("User")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "user")] HttpRequest req,
