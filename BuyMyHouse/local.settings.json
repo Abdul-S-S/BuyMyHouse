@@ -1,0 +1,12 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+        "connectionString": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
+        "databaseName": "BuyMyHouse",
+        "sendgrid_key": "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",
+        "DummyDataPath": "D:\\CodeProjects\\School\\BuyMyHouseEstateAgents\\BuyMyHouse\\Datastore\\DummyData.json",
+        "EmailTemplatePath": "D:\\CodeProjects\\School\\BuyMyHouseEstateAgents\\BuyMyHouse\\Datastore\\Email.html"
+    }
+}
