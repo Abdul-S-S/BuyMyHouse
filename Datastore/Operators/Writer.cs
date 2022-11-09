@@ -24,22 +24,27 @@ namespace Datastore.Operators
             _logger = logger;
             _context = context;
         }
-        public void Write<Entity>(Entity obj) where Entity : class
+        public async Task Write<Entity>(Entity obj) where Entity : class
         {
-            _context.AddAsync<Entity>(obj);
-            _context.SaveChangesAsync();
+            await _context.AddAsync<Entity>(obj);
+            await _context.SaveChangesAsync();
         }
-        public void Write<Entity>(IList<Entity> objList) where Entity : class
+        public async Task Write<Entity>(IList<Entity> objList) where Entity : class
         {
-            _context.AddRangeAsync(objList);
-            _context.SaveChangesAsync();
+            await _context.AddRangeAsync(objList);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Update<Entity>(Entity obj) where Entity : class
+        {
+             _context.Update<Entity>(obj);
+            await _context.SaveChangesAsync();
 
         }
-
-        public void Update<Entity>(Entity obj) where Entity : class
+        public async Task Update<Entity>(IList<Entity> objList) where Entity : class
         {
-            _context.Update<Entity>(obj);
-            _context.SaveChangesAsync();
+            _context.UpdateRange(objList);
+            await _context.SaveChangesAsync();
 
         }
     }

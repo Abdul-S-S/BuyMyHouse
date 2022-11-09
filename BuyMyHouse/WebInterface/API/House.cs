@@ -12,11 +12,11 @@ using BuyMyHouse.Interfaces;
 
 namespace BuyMyHouse.API
 {
-    public class House
+    public class HouseAPI
     {
         private readonly IHouseService _houseService;
 
-        public House(IHouseService houseService)
+        public HouseAPI(IHouseService houseService)
         {
             _houseService = houseService;
         }
@@ -38,7 +38,7 @@ namespace BuyMyHouse.API
                     try
                     {
                         string[] minMax = range.Split("-");
-                        _houseService.GetHouses(Convert.ToInt32(minMax[0]), Convert.ToInt32(minMax[1]));
+                        _houseService.GetHouses(h => h.Price > Convert.ToDouble(minMax[0]) && h.Price < Convert.ToDouble(minMax[1]));
                     }
                     catch(Exception e)
                     {

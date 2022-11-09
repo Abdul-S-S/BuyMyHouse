@@ -15,7 +15,7 @@ namespace BuyMyHouse.Schedules
             _sendMortgageOffersService = sendMortgageOffersService;
         }
         [FunctionName("SendMortgageOffers")]
-        public void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log)
+        public void Run([TimerTrigger("0 0 8 * * 1-5")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             try

@@ -11,8 +11,9 @@ namespace BuyMyHouse.Interfaces
 {
     public  interface IHouseService
     {
-        public void GetHouses();
-        public void GetHouses(double minimumPrice, double maximumPrice);
-        public void GetHouses(Expression<Func<House, bool>> predicate);
+        public List<House> GetHouses();
+        public List<House> GetHouses(double minimumPrice, double maximumPrice);
+        public List<House> GetHouses(Func<House, bool> predicate);
+        public void SaveHouses(IList<House> houses);
     }
 }

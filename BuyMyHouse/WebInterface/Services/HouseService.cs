@@ -42,19 +42,19 @@ namespace BuyMyHouse.Services
             SaveHouses(houses);
         }
 
-        public void GetHouses()
+        public List<House> GetHouses()
         {
-            _dbUnitOfWork.Reader.Read<House>();
+            return _dbUnitOfWork.Reader.Read<House>().ToList();
         }
 
-        public void GetHouses(double minimumPrice, double maximumPrice)
+        public List<House> GetHouses(double minimumPrice, double maximumPrice)
         {
-            _dbUnitOfWork.Reader.Read<House>(h => h.Price > minimumPrice && h.Price < maximumPrice);
+            return _dbUnitOfWork.Reader.Read<House>(h => h.Price > minimumPrice && h.Price < maximumPrice).ToList();
         }
 
-        public void GetHouses(Expression<Func<House, bool>> predicate)
+        public List<House> GetHouses(Func<House, bool> predicate)
         {
-            _dbUnitOfWork.Reader.Read<House>(predicate);
+            return _dbUnitOfWork.Reader.Read<House>(predicate).ToList();
         }
         public void SaveHouses(IList<House> houses)
         {

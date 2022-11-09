@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage" Version="5.0.1" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Timer" Version="4.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
+    <PackageReference Include="SendGrid" Version="9.28.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datastore\Datastore.csproj" />

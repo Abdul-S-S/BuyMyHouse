@@ -21,5 +21,9 @@ namespace Datastore.Models
             MonthlyPayments = monthlyPayments;
             Created = DateTime.Now;
         }
+        public override string ToString()
+        {
+            return $"MonthlyPayments: {MonthlyPayments}, Total Mortgage: {TotalMortgage}";
+        }
     }
 }

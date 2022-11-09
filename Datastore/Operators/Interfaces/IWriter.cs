@@ -8,7 +8,11 @@ namespace Datastore.Operators.Interfaces
 {
     public interface IWriter
     {
-        void Write<T>(T obj) where T : class;
-        void Write<Entity>(IList<Entity> objList) where Entity : class;
+        Task Write<T>(T obj) where T : class;
+        Task Write<Entity>(IList<Entity> objList) where Entity : class;
+        public Task Update<Entity>(Entity obj) where Entity : class;
+        public Task Update<Entity>(IList<Entity> objList) where Entity : class;
+
+
     }
 }

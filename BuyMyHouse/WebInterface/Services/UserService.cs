@@ -35,23 +35,23 @@ namespace BuyMyHouse.Services
             JObject dummyData = JObject.Parse(File.ReadAllText(path));
             JArray dummyhouses = JArray.Parse(dummyData["Users"].ToString());
             IList<User> users = dummyhouses.Select(x => JsonConvert.DeserializeObject<User>(x.ToString())).ToList();
-            SaveUsers(users);
+            WriteUser(users);
         }
-        public void GetUsers(Expression<Func<User, bool>> predicate)
+        public List<User> GetUsers(Func<User, bool> predicate)
         {
-            _dbUnitOfWork.Reader.Read<User>(predicate);
+           return _dbUnitOfWork.Reader.Read<User>(predicate).ToList();
         }
 
-        public void GetUsers()
+        public List<User> GetUsers()
         {
-            _dbUnitOfWork.Reader.Read<User>();
+            return _dbUnitOfWork.Reader.Read<User>().ToList();
         }
 
         public void WriteUser(User user)
         {
             _dbUnitOfWork.Writer.Write<User>(user);
         }
-        public void SaveUsers(IList<User> users)
+        public void WriteUser(IList<User> users)
         {
             _dbUnitOfWork.Writer.Write(users);
         }

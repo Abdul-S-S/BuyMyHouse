@@ -18,8 +18,7 @@ namespace BuyMyHouse
     {
         public void Configure(IWebJobsBuilder builder)
         {
-
-            builder.Services.AddDbContext<CosmosDbContext>();
+            builder.Services.AddDbContext<CosmosDbContext>(ServiceLifetime.Transient);
             builder.Services.TryAddScoped(typeof(IReader), typeof(Reader));
             builder.Services.TryAddScoped(typeof(IWriter), typeof(Writer));
             builder.Services.TryAddScoped(typeof(IDBUnitOfWork), typeof(DBUnitOfWork));
